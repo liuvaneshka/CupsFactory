@@ -1,0 +1,79 @@
+Introducción:
+ 
+ El siguiente informe describe la implementación de las herramientas dadas en clases para la resolución del
+ trabajo práctico integrador, el cual requiere como mínimo poder crear, almacenar, modificar y eliminar pedidos, además de
+ clasificarlos, y poder calcular un óptimo recorrido para su distribución, además integrar inteligencia artificial, en
+ la identificación de productos para clasificarlos y saber su stock, para poder hacer el envío del pedido.
+ 
+ Más allá que como estudiantes de Algoritmos I, se busca que practiquemos no solo nuestras capacidades individuales
+ de programación yo de resolución de problemas, sino también de poder estar en contacto con la realidad que es la
+ de trabajar con otros programadores, consiste en anticipar el usos, poder dividir las funciones y para lograr
+ exitosamente la incorporación de manera adecuada todas las funciones de nuestro programa, cabe acotar el aprendizaje
+ de herramientas como GIT.
+ 
+ 
+ ABM (Alta,Baja,Modificación):
+     
+Se nos pide hacer un ABM de pedidos, para almacenarlos en un .csv con un formato en el cual cada línea este un artículo
+del pedido.
+
+Decidimos usar diccionarios para la obtención de estos datos, y el manejo de estos mientras este corriendo el programa
+el número de pedido sería la clave de nuestro diccionario. Dentro de este diccionario tendremos valores de tipo entero,cadena
+y un diccionario este último lo usaremos para almacenar los artículos pedidos dentro de un mismo pedido, su clave será el
+código del artículo y cada artículo contiene datos de tipo cadena y enteros refiriéndose al color, cantidad pedida y descuento
+
+La fecha del pedido la definimos como la fecha en la que se realizó el pedido, se asigna automáticamente con la librería datetime y usamos la fecha de ingreso que sería la actual
+
+Creamos la función ingreso de artículos pedidos que llamamos desde el ingreso de pedidos, en esta se le pide al usuario
+el  color, en esta función hardcodeamos un diccionario artículos basados en el archivo pdf , el cual vamos a usar para validar las
+entradas del usuario, (color y código) el descuento también es ingresado por el usuario, nos basamos en el ejemplo del pedidos.csv
+un artículo dependiendo del pedido cambiaba su descuento. para la cantidad de artículos pedidos no utilizamos el stock se valida
+después en el punto siete cuando se valida la completación de pedidos.
+
+Para la modificación el usuario debe ingresar el número del pedido, se valida, después pide al usuario que ingrese
+el dato a modificar, la que sería la clave del diccionario y actualiza cambiando su valor.
+
+Al terminar la modificación, recorre el archivo pedidos.csv y borra las líneas que contenga ese número de pedido,luego
+se actualiza pedidos.csv con el diccionario actual,  se retorna ese diccionario al main.
+
+
+Recorrido:
+    
+Tomamos como punto de partida o salida de los pedidos C.A.B.A.
+El recorrido de entregas se hace en sentido circular (espiral)
+Utilizamos diccionarios para cada zona (centro,sur,norte,C.A.B.A) sus valores son los pedidos completados y lo almacenamos
+en un diccionario pedidos por zona.
+Para la definición de zonas usamos el método abs de gps, y el atributo latitud para determinar dentro de qué valores
+será la zona.
+
+Creamos una lista que almacena las ciudades de los pedidos le pasamos al método geolocator.geocode la ciudad la cual nos
+da la locación
+creamos los diccionarios con las latitudes de cada ciudad [ciudad seria la clave] ordenamos los diccionarios por latitud
+agregamos a la lista recorrido cada ciudad
+
+Procesamiento de pedidos:
+    
+Asumimos que si los utilitarios están distribuidos de forma óptima el espacio en los utilitarios va a alcanzar
+para completar los pedidos.
+No se entregan pedidos incompletos,si el stock no alcanza para completar un pedido se pasa al siguiente pedido
+
+Inteligencia Artificial:
+
+Creamos las funciones que definirían el rango necesario para la detección de un color en específico
+Cargamos el archivo de configuración y el archivo weights para armar la red, cargamos los nombres de las clases
+se construye un BLOB  de la imagen y creamos un Input a la red.
+Se identifica el índice de clase con la confianza(confidence score) más alto
+Seleccionamos los cuadros de predicción con una confianza de más del 30%
+para asociar el color con el artículo creamos una variable etiqueta que se crea  en la función detectar imagen
+si la etiqueta no es "cup" o "bottle" lanzamos el mensaje de proceso detenido ya que En caso de que detecte
+un animal el proceso se "detiene", en esta función se crea un diccionario que almacenará el stock de cada
+producto basado en las imágenes de lote0001
+A partir del stock disponible nos devuelve un diccionario más simple con la disponibilidad de colores
+de cada artículo.
+
+
+Conclusión:
+
+La desarrollo de este programa, integrando las herramientas vistas durante el cuatrimestre, y buenas prácticas,nos permitió
+cumplir con los objetivos pedidos, el diseño tomó gran parte de del tiempo, al inicio del proyecto, aun así se logró la construcción de un programa con la capacidad de manejar pedidos, desde calcular el stock por imágenes, hasta realizar
+un recorrido óptimo de entregas.

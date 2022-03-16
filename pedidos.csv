@@ -1,0 +1,33 @@
+Nro. Pedidio, Fecha, Cliente, Ciudad, Provincia, Cod. Artículo, Color, Cantidad, Descuento
+1,01/11/2021,Juan Alvarez,Villa María,Córdoba,1334,Azul,3,5
+1,01/11/2021,Juan Alvarez,Villa María,Córdoba,568,Azul,1,5
+1,01/11/2021,Juan Alvarez,Villa María,Córdoba,568,Negro,6,5
+1,01/11/2021,Juan Alvarez,Villa María,Córdoba,1334,Amarillo,1,5
+2,01/11/2021,Carlos Rodriguez,Paraná,Entre Ríos,1334,Rojo,5,0
+2,01/11/2021,Carlos Rodriguez,Paraná,Entre Ríos,1334,Negro,5,0
+3,02/11/2021,Juan Lopez,Santa Rosa,La Pampa,1334,Amarillo,1,10
+3,02/11/2021,Juan Lopez,Santa Rosa,La Pampa,1334,Azul,4,10
+3,02/11/2021,Juan Lopez,Santa Rosa,La Pampa,1334,Rojo,4,10
+3,02/11/2021,Juan Lopez,Santa Rosa,La Pampa,1334,Negro,1,10
+3,02/11/2021,Juan Lopez,Santa Rosa,La Pampa,568,Azul,4,10
+3,02/11/2021,Juan Lopez,Santa Rosa,La Pampa,568,Negro,4,10
+4,02/11/2021,Carlos Arana,Bariloche,Rio Negro,1334,Rojo,1,0
+5,02/11/2021,Mario Mangiafave,CABA,Buenos Aires,1334,Rojo,1,15
+5,02/11/2021,Mario Mangiafave,CABA,Buenos Aires,1334,Amarillo,3,15
+5,02/11/2021,Mario Mangiafave,CABA,Buenos Aires,1334,Azul,4,15
+6,05/12/2021,andres,Comodoro Rivadavia,Chubut,568,Azul,2,0
+7,05/12/2021,pepe mujica,El Calafate,santa cruz,568,Azul,1,0
+7,05/12/2021,pepe mujica,El Calafate,santa cruz,1334,Verde,1,0
+7,05/12/2021,pepe mujica,El Calafate,santa cruz,1334,Azul,3,0
+7,05/12/2021,pepe mujica,El Calafate,santa cruz,1334,Rojo,4,0
+8,05/12/2021,andres,Salta capital,Salta,568,Azul,1,0
+10,05/12/2021,juli,Resistencia,Chaco,1334,Verde,4,0
+11,05/12/2021,patricio,Salta capital,Salta,1334,Rojo,2,0
+12,05/12/2021,pitifina,Salta capital,Salta,568,Azul,2,0
+12,05/12/2021,pitifina,Salta capital,Salta,1334,Verde,5,0
+13,05/12/2021,vilma,Rosario,Santa Fe,1334,Verde,2,3
+13,05/12/2021,vilma,Rosario,Santa Fe,568,Negro,1,5
+15,09/12/2021,Pedro,Mar del Plata,Buenos Aires,1334,Amarillo,3,5
+15,09/12/2021,Pedro,Mar del Plata,Buenos Aires,568,Negro,5,5
+15,09/12/2021,Pedro,Mar del Plata,Buenos Aires,1334,Azul,3,5
+16,10/12/2021,Pablo,Rosario,Santa Fe,1334,Verde,2,0
