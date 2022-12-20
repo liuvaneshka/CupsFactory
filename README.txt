@@ -15,7 +15,6 @@ CALCULATE ROUTE
 * A list stores the cities of the orders, we give the location to the method geolocator.geocode.
 * A dictionaries stores the latitudes of each city [city would be the key] we order the dictionaries by latitude. We add each city to the tour list.
 
-AI 
 
 Artificial intelligence:
 
